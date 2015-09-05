@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>create layout</title>
+    <meta charset="utf-8">
+    <style>
+        body, h1 {
+            margin: 0;
+        }
+        
+        .gnb_wrap {
+            background-color: #333;
+        }
+        
+        .gnb {
+            margin: 0 auto;
+        }
+         
+/* 브라우저 기본 스타일을 제거하기 위한 코드 */
+        .gnb:after {
+            display: block;
+            clear: both;
+            content: '';
+        }
+        
+        .gnb > li {
+            float: left;
+            width: 16.6%; 
+            position: relative;
+        }
+        
+        .gnb_sub {
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 100%;
+            width: 100%;
+        }
+        
+        .gnb_sub li {
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+        }
+         
+        
+        .gnb_sub li + li {
+            border-top: 1px solid #ccc;
+        }
+        
+        .gnb_sub li a {
+            display: block;
+            padding: 5px;
+            text-align: center;
+            color: #999;
+        }
+         
+        .a {
+            text-decoration: none;
+        }
+        
+        .gnb > li > a {
+            text-decoration: none;
+            padding: 10px 0;
+            display: block;
+            border: 1px solid #ccc;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+        
+        .gnb > li > a:hover {
+            background-color: #000;            
+        }
+        
+        .gnb > li:hover .gnb_sub {
+            display: block;            
+        }
+        
+        .gnb > li:hover {
+            z-index: 1;
+        }
+        
+        .gnb > li:hover .gnb_sub {
+            display: block;            
+        }
+        
+    
+        
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        
+        .wrap {
+            overflow: hidden;
+            margin: 0 auto;
+            max-width: 900px;
+
+        }
+        
+        .container {
+            overflow: hidden;
+        }
+        
+        nav {
+            float: right;
+            width: 200px;
+            background-color: #667;
+            display: none;
+        }
+
+        header {
+            border: 1px solid black;
+        }
+        
+        header h1 {
+            text-align: center; 
+            line-height: 80px;
+        }
+        
+        footer {
+            border: 1px solid black;
+        }
+
+    .ellipsis {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+     ul {
+        list-style: none;
+     }
+
+    .spot {
+        height: 200px;
+        background-image: url(img/bannerBooksBigBooks.jpg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+    }
+
+    nav {
+        float: left;
+        width: 200px;
+    }
+
+    .category {
+        border: 2px solid #008cff;
+        background-color: #fff;
+    }
+
+    .category li a {
+        display: block; 
+        padding: 6px 0 5px 40px;
+        background-image: url(img/coupang.png);
+        background-repeat: no-repeat;
+        background-position: 10px -24px;
+        font-size: 12px;
+        font-family: '돋움', dotum, sans-serif;
+        line-height: 18px;
+        color: #333;
+    }
+
+    .category li a.item1 {
+        background-position: 10px -24px;
+    }
+
+    .category li a.item2 {
+        background-position: 10px -54px;
+    }
+
+    .category li a.item3 {
+        background-position: 10px -84px;
+    }
+
+    .category li a.item4 {
+        background-position: 10px -114px;
+    }
+
+    .category li a.item1:hover {
+        background-position: 12px -414px;
+    }
+
+    .category li a.item2:hover {
+        background-position: 12px -444px;
+    }
+
+    .category li a.item3:hover {
+        background-position: 12px -474px;
+    }
+
+    .category li a.item4:hover {
+        background-position: 12px -504px;
+    }
+
+    .category li a:hover {
+        font-weight: bold;
+        color: #008cff;
+        background-position: 10px -414px;
+    }
+
+        
+        /* common css (reset css) 8px Chrome default*/
+        body {
+            margin: 0; 
+        }
+        
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .shopping_list {
+            padding: 0 5px;
+            overflow: hidden;
+        }
+        
+        .shopping_item {
+/*
+            float: left;
+            width: 20%;
+*/
+        }
+        
+        .shopping_item .box {
+            padding: 0 5px;
+        }
+            
+        .thumb {
+            border: 1px solid;
+            height: 120px;
+            overflow: hidden;
+        }
+        
+        .ellipsis {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+              
+        @media screen and (min-width:600px) {
+            .shopping_item {
+                float: left;
+                width: 50%;
+            }
+        }
+        
+        @media screen and (min-width:700px) {
+            .shopping_item {
+                width: 33.3%;
+            }
+        }
+        
+        @media screen and (min-width:800px) {
+            .shopping_item {
+                width: 25%;
+            }
+        }
+        
+        @media screen and (min-width:900px) {
+            .shopping_item {
+                width: 20%;
+            }
+        }
+        
+        @media screen and (orientation: landscape) {
+            .thumb {
+                height: 100px;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .gnb > li {
+                width: 33.3%;
+            }
+            
+        @media screen and (max-width: 400px) {
+            .gnb > li {
+                width: 50%;
+            }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <h1><a href="#">Bookstore</a></h1>
+            <div class="gnb_wrap">            
+                <ul class="gnb">
+                    <li><a href="#">메뉴1</a>
+                        <ul class="gnb_sub">
+                            <li><a href="#">메뉴1-1</a></li>
+                            <li><a href="#">메뉴1-2</a></li>
+                            <li><a href="#">메뉴1-3</a></li>
+                            <li><a href="#">메뉴1-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴2</a>
+                        <ul class="gnb_sub">
+                            <li><a href="#">메뉴2-1</a></li>
+                            <li><a href="#">메뉴2-2</a></li>
+                            <li><a href="#">메뉴2-3</a></li>
+                            <li><a href="#">메뉴2-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴3</a>
+                        <ul class="gnb_sub">
+                            <li><a href="#">메뉴3-1</a></li>
+                            <li><a href="#">메뉴3-2</a></li>
+                            <li><a href="#">메뉴3-3</a></li>
+                            <li><a href="#">메뉴3-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴4</a>
+                        <ul class="gnb_sub">
+                            <li><a href="#">메뉴4-1</a></li>
+                            <li><a href="#">메뉴4-2</a></li>
+                            <li><a href="#">메뉴4-3</a></li>
+                            <li><a href="#">메뉴4-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴5</a>
+                        <ul class="gnb_sub">
+                            <li><a href="#">메뉴5-1</a></li>
+                            <li><a href="#">메뉴5-2</a></li>
+                            <li><a href="#">메뉴5-3</a></li>
+                            <li><a href="#">메뉴5-4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴6</a></li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="container">
+            <nav>
+                <ul class="category">
+                    <li><a href="#" class="item1">패션의류/잡화</a></li>
+                    <li><a href="#" class="item2">뷰티</a></li>
+                    <li><a href="#" class="item3">출산/유아동</a></li>
+                    <li><a href="#" class="item4">식품</a></li>
+                    <li><a href="#">주방/생활용품</a></li>
+                    <li><a href="#">가구/홈데코</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="spot">
+            텍스트
+        </div>
+<!--
+        <p class="ellipsis">
+        내용이 길어서
+        내용이 길어서
+        내용이 길어서
+        내용이 길어서
+        </p>
+-->
+
+        <div class="container">
+            <nav>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+                내비게이션<br>
+            </nav>
+        </div>
+        
+        <ul class="shopping_list">
+            <li class="shopping_item">
+                <div class="box">
+                    <div class="thumb">
+                        <img src="http://ecx.images-amazon.com/images/I/51FtqHSEUQL._SL140_.jpg" width="100%">
+                    </div>
+                    <p class="ellipsis">Your Baby's First Word Will Be DADA<br>
+                        Jimmy Fallon, Miguel Ordóñez
+                    </p>
+                </div>
+            </li>
+            <li class="shopping_item">
+                <div class="box">
+                    <div class="thumb">
+                        <img src="http://ecx.images-amazon.com/images/I/51q3%2Bu5cenL._SX140_.jpg" width="100%">
+                    </div>
+                    <p class="ellipsis">The Wonderful Things You Will Be<br>
+                        Emily Winfield Martin
+                    </p>
+                </div>
+            </li>
+            <li class="shopping_item">
+                <div class="box">
+                    <div class="thumb">
+                        <img src="http://ecx.images-amazon.com/images/I/51UNH-jIcFL._SL140_.jpg" width="100%">
+                    </div>
+                    <p class="ellipsis">If Animals Kissed Good Night<br>
+                        Ann Whitford Paul, David Walker
+                    </p> 
+                </div>
+            </li>
+            <li class="shopping_item">
+                <div class="box">
+                    <div class="thumb">
+                        <img src="http://ecx.images-amazon.com/images/I/51MyqztjL9L._SY160_.jpg" width="100%">
+                    </div>
+                    <p class="ellipsis">Ten Tiny Toes<br>
+                        Caroline Jayne Church
+                    </p>
+                </div>
+            </li>
+            <li class="shopping_item">
+                <div class="box">
+                    <div class="thumb">
+                        <img src="http://ecx.images-amazon.com/images/I/51MyqztjL9L._SY160_.jpg" width="100%">
+                    </div>
+                    <p class="ellipsis">Ten Tiny Toes<br>
+                        Caroline Jayne Church
+                    </p>
+                </div>
+            </li>
+            <li class="shopping_item">
+                <div class="box">
+                    <div class="thumb">
+                        <img src="http://ecx.images-amazon.com/images/I/51MyqztjL9L._SY160_.jpg" width="100%">
+                    </div>
+                    <p class="ellipsis">Ten Tiny Toes<br>
+                        Caroline Jayne Church
+                    </p>
+                </div>
+            </li>
+            <li class="shopping_item">
+                <div class="box">
+                    <div class="thumb">
+                        <img src="http://ecx.images-amazon.com/images/I/51MyqztjL9L._SY160_.jpg" width="100%">
+                    </div>
+                    <p class="ellipsis">Ten Tiny Toes<br>
+                        Caroline Jayne Church
+                    </p>
+                </div>
+            </li>
+            <li class="shopping_item">
+                <div class="box">
+                    <div class="thumb">
+                        <img src="http://ecx.images-amazon.com/images/I/51MyqztjL9L._SY160_.jpg" width="100%">
+                    </div>
+                    <p class="ellipsis">Ten Tiny Toes<br>
+                        Caroline Jayne Church
+                    </p>
+                </div>
+            </li>
+        </ul>
+        <footer>푸터</footer>
+    </div>
+</body>
+</html>
+    
